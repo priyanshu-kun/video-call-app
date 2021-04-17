@@ -9,9 +9,9 @@ function CallPage() {
         <div className="callpage-container">
             <video src="" className="video-container" controls></video>
             <CallPageHeader />
-            {/* <CallPageFooter /> */}
+            <CallPageFooter />
             <MeetingInfo />
-            {/* <Messanger /> */}
+            <Messanger />
         </div>
     )
 }
