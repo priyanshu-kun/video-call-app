@@ -3,8 +3,16 @@ import Header from "./UI/Header/Header";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVideo, faKeyboard } from '@fortawesome/free-solid-svg-icons'
 import video from "../../Assets/production ID_4255065.mp4";
+import shortid from "shortid";
+import { useHistory } from "react-router-dom";
 
 function HomePage() {
+    const history = useHistory();
+    const startCall = () => {
+        const sid = shortid.generate();
+        history.push(`/${sid}#init`)
+    }
+
     return (
         <div className="home-page">
             <Header />
@@ -14,7 +22,7 @@ function HomePage() {
                         <h2>Preminum video meeting now free for everyone!</h2>
                         <p>Always connect with your loved one and move forward with our software. I hope you will enjoy this shit😎.</p>
                         <div className="action-btn">
-                            <button className="btn make-call">
+                            <button className="btn make-call" onClick={startCall}>
                                 <FontAwesomeIcon className="icon-block" icon={faVideo} />
                                 New Meeting
                             </button>

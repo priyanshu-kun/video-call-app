@@ -7,7 +7,11 @@ const server = http.createServer(app);
 
 app.use(cors(), express.json(), express.urlencoded({ extended: false }))
 app.use('/', require("./routes/routes"));
-const io = require("socket.io")(server);
+const io = require("socket.io")(server, {
+    cors: {
+        origin: '*',
+    }
+});
 const socketManager = require("./routes/socketManager");
 io.on("connection", socketManager);
 

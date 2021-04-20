@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMicrophone, faPhone, faAngleUp, faClosedCaptioning, faDesktop, faMicrophoneSlash, faVideo } from '@fortawesome/free-solid-svg-icons'
+import { faMicrophone, faPhone, faAngleUp, faClosedCaptioning, faDesktop, faVideo } from '@fortawesome/free-solid-svg-icons'
 import "./CallPageFooter.scss"
 
 function CallPageFooter() {
